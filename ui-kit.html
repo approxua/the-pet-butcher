@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>the PET BUTCHER</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicons/manifest.webapp">
+    <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<style>
+    section {
+        margin: 80px 0;
+        padding: 40px 0;
+    }
+
+    .section-text .mbox * {
+        margin: 20px 0;
+    }
+
+    .bg-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px 32px;
+    }
+
+    .bg-group__item {
+        width: 144px;
+        height: 144px;
+        border: 1px solid #c1c1c1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bg-group__item-color {
+        height: 102px;
+    }
+
+    .bg-group__item-name {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section-buttons .mbox {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 48px 32px;
+    }
+
+    h6 {
+        margin: 20px 0;
+    }
+</style>
+<div class="global-wrapper">
+    <header class="header">
+        <div class="header__row">
+            <a href="/" class="header__logo">
+                <svg>
+                    <use xlink:href="#logo-ico"></use>
+                </svg>
+            </a>
+            <div class="header__nav">
+                <div class="header__links">
+                    <a href="#" class="header__links-item">Shop</a>
+                    <a href="#" class="header__links-item">About</a>
+                    <a href="#" class="header__links-item">Wholesale</a>
+                    <a href="#" class="header__links-item">Contact</a>
+                </div>
+                <a href="#" class="header__search">
+                    <svg>
+                        <use xlink:href="#search-ico"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__basket">
+                    <svg>
+                        <use xlink:href="#basket-ico"></use>
+                    </svg>
+                    <span class="header__basket-circle">2</span>
+                </a>
+    
+            </div>
+        </div>
+    </header>
+    <main class="main page-ui-kit">
+    </main>
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="mbox">
+                <a href="#" class="footer__logo">
+                    <svg>
+                        <use xlink:href="#footer-logo"></use>
+                    </svg>
+                </a>
+                <div class="footer__nav">
+                    <a href="#" class="footer__link">Home</a>
+                    <a href="#" class="footer__link">Shop</a>
+                    <a href="#" class="footer__link">About</a>
+                    <a href="#" class="footer__link">Wholesale</a>
+                    <a href="#" class="footer__link">FAQ</a>
+                    <a href="#" class="footer__link">Delivery & Shipping</a>
+                    <a href="#" class="footer__link">Contact</a>
+                    <a href="#" class="footer__link">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="mbox">
+                <div class="footer__social">
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#fb-ico"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="footer__social-unit">
+                        <svg>
+                            <use xlink:href="#insta-ico"></use>
+                        </svg>
+                    </a>
+                </div>
+                <span class="footer__copyright">© 2022 The Pet Butcher</span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+    
+        let revision = dateTime;
+        let file = 'images/sprite.svg';
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/dev.js"></script>
+</div>
+</body>
+</html>

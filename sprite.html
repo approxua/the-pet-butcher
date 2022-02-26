@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>the PET BUTCHER</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicons/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="apple-touch-icon" href="favicons/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="favicons/manifest.webapp">
+    <link rel="icon" href="favicons/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/plugins.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="global-wrapper">
+    <header class="header">
+        <div class="header__row">
+            <a href="/" class="header__logo">
+                <svg>
+                    <use xlink:href="#logo-ico"></use>
+                </svg>
+            </a>
+            <div class="header__nav">
+                <div class="header__links">
+                    <a href="#" class="header__links-item">Shop</a>
+                    <a href="#" class="header__links-item">About</a>
+                    <a href="#" class="header__links-item">Wholesale</a>
+                    <a href="#" class="header__links-item">Contact</a>
+                </div>
+                <a href="#" class="header__search">
+                    <svg>
+                        <use xlink:href="#search-ico"></use>
+                    </svg>
+                </a>
+                <a href="#" class="header__basket">
+                    <svg>
+                        <use xlink:href="#basket-ico"></use>
+                    </svg>
+                    <span class="header__basket-circle">2</span>
+                </a>
+    
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="mbox">
+            <div class="svg-container"></div>
+        </div>
+    </div>
+    <style>
+        .svg-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            border: 1px solid #0f0f11;
+        }
+
+        .svg-container div {
+            width: 200px;
+            padding: 10px;
+            border: 1px solid #0f0f11;
+            flex-grow: 1;
+        }
+
+        .svg-container svg {
+            width: 100%;
+        }
+    </style>
+    <script>
+        let today = new Date();
+        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        let dateTime = date + ' ' + time;
+    
+        let revision = dateTime;
+        let file = 'images/sprite.svg';
+    </script>
+    <script src="js/plugins.js"></script>
+    <script src="js/base.js"></script>
+    <script src="js/dev.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('body>svg symbol').each(function () {
+                var id = $(this).attr('id');
+                var div = document.createElement('div');
+                $(div).html('<svg><use xlink:href="#' + id + '"></use></svg><p>#' + id + '</p>');
+                $('.svg-container').append(div);
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
