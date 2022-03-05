@@ -1,4 +1,4 @@
-let $body = $('.body');
+let $body = $('body');
 
 const productSwiper = new Swiper('.products', {
     loop: true,
@@ -12,10 +12,20 @@ const productSwiper = new Swiper('.products', {
 
 const responseSwiper = new Swiper('.response__slider-wrap', {
     slidesPerView: 'auto',
+    loop: true,
+    spaceBetween: 16,
+    centeredSlides: true,
     navigation: {
         nextEl: '.response .arrows__right',
         prevEl: '.response .arrows__left',
     },
+    breakpoints: {
+        1280: {
+            slidesPerView: 3,
+            loop: false,
+            centeredSlides: false
+        }
+    }
 });
 
 function getBodyClass() {
@@ -52,7 +62,25 @@ function showMore() {
     })
 }
 
+function showMobmenu() {
+    let burger = $('.header__burger');
+    let nav = $('.header__nav');
+    let shadow = $('.shadow');
+    burger.on('click', function () {
+        nav.addClass('header__nav--opened');
+        shadow.addClass('shadow--opened');
+        $body.addClass('body--fixed');
+    })
+
+    shadow.on('click', function () {
+        nav.removeClass('header__nav--opened');
+        shadow.removeClass('shadow--opened');
+        $body.removeClass('body--fixed');
+    })
+}
+
 $(document).ready(function () {
     showMore();
     animationHeader();
+    showMobmenu();
 })
